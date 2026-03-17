@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    ".rules/base.md",
+    ".rules/architecture.md",
+    ".rules/git-workflow.md",
+    ".rules/design-system.md"
+  ],
+  "mcp": {
+    "together_ai_docs": {
+      "type": "remote",
+      "url": "https://docs.together.ai/mcp",
+      "enabled": true
+    }
+  }
+}

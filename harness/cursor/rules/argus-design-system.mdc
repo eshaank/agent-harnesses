@@ -1,0 +1,8 @@
+---
+description: Argus design system — dark-mode tokens, DM Sans + JetBrains Mono + Fraunces, accent blue
+globs:
+  - "frontend/src/**/*.{ts,tsx,css}"
+alwaysApply: false
+---
+
+@.rules/design-system.md

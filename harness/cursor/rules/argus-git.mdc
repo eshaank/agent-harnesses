@@ -1,0 +1,6 @@
+---
+description: Git branch-first workflow and branch naming conventions
+alwaysApply: true
+---
+
+@.rules/git-workflow.md

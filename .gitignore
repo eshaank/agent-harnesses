@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.local
+*.env
+.env.*
+!.env.example
+
+# Lock files (kept per-tool)
+# bun.lock is intentionally committed inside harness/opencode/

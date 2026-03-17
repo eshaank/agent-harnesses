@@ -1,0 +1,9 @@
+---
+description: Backend DDD structure, frontend chat+canvas, tool registry, SSE streaming
+globs:
+  - "backend/**/*.py"
+  - "frontend/src/**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+@.rules/architecture.md
