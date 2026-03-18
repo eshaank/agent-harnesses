@@ -1,0 +1,11 @@
+{
+  "skills": {
+    "code-review": {
+      "description": "Systematic code review — security, performance, types, testing",
+      "triggers": ["review", "audit", "check code", "security review"],
+      "stack": [],
+      "depends_on": [],
+      "files": ["SKILL.md"]
+    }
+  }
+}

@@ -5,5 +5,9 @@ node_modules/
 .env.*
 !.env.example
 
+# Agent harness (generated at setup time)
+harness/output/
+harness/harness.config.json
+
 # Lock files (kept per-tool)
 # bun.lock is intentionally committed inside harness/opencode/
