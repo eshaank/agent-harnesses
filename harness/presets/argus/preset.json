@@ -1,0 +1,99 @@
+{
+  "name": "argus",
+  "description": "Argus financial research terminal — React + Vite frontend, FastAPI backend, Supabase auth, LLM-powered chat with tool registry",
+  "version": "1.0.0",
+  "stack": ["python", "typescript", "react", "fastapi", "supabase"],
+  "variables": {
+    "PROJECT_NAME": "Argus",
+    "PROJECT_DESCRIPTION": "A conversational financial research terminal",
+    "TEAM_NAME": "3Epsilon",
+    "DEFAULT_BRANCH": "main",
+    "FRONTEND_DIR": "frontend",
+    "BACKEND_DIR": "backend",
+    "PYTHON_INTERPRETER": "./backend/.venv/bin/python",
+    "REQUIRED_ENV_VARS": [
+      { "name": "MASSIVE_API_KEY", "required": true, "service": "Backend", "description": "API key for Polygon.io + Massive APIs" },
+      { "name": "FRED_API_KEY", "required": true, "service": "Backend", "description": "API key for FRED economic data" },
+      { "name": "TOGETHER_API_KEY", "required": true, "service": "Backend", "description": "API key for Together AI LLM (chat)" },
+      { "name": "VITE_API_BASE_URL", "required": true, "service": "Frontend", "description": "Backend URL (e.g. http://localhost:8000)" },
+      { "name": "VITE_SUPABASE_URL", "required": true, "service": "Frontend", "description": "Supabase project URL" },
+      { "name": "VITE_SUPABASE_ANON_KEY", "required": true, "service": "Frontend", "description": "Supabase anon key" },
+      { "name": "SUPABASE_URL", "required": true, "service": "Backend", "description": "Supabase URL for JWKS verification" },
+      { "name": "DEBUG", "required": false, "service": "Backend", "description": "FastAPI debug mode" }
+    ],
+    "PORT_MAPPINGS": {
+      "dev:test:website": 4000,
+      "dev:test:api": 4010,
+      "dev:test:dashboard": 4020,
+      "dev:website": 3000,
+      "dev:api": 3001,
+      "dev:dashboard": 3002
+    }
+  },
+  "rules": [
+    "rules/base-overrides.md",
+    "rules/architecture.md",
+    "rules/design-system.md"
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "bash .claude/hooks/check-rybbit.sh" },
+          { "type": "command", "command": "bash .claude/hooks/check-e2e.sh" }
+        ]
+      }
+    ]
+  },
+  "agents": ["explore"],
+  "commands": [
+    "create-e2e.md",
+    "architecture.md",
+    "diagram.md",
+    "setup.md",
+    "show-user-guide.md",
+    "add-project-setup.md",
+    "convert-project-to-starter-kit.md",
+    "install-global.md",
+    "new-project.md",
+    "projects-created.md",
+    "quickstart.md",
+    "remove-project.md",
+    "set-project-profile-default.md",
+    "update-project.md",
+    "what-is-my-ai-doing.md"
+  ],
+  "skills": [
+    "chat-orchestration",
+    "domain-builder",
+    "fastapi-templates",
+    "massive-api",
+    "polymarket-api",
+    "supabase-postgres-best-practices",
+    "vercel-react-best-practices",
+    "ui-design-system",
+    "widget-builder",
+    "refactor-migrator"
+  ],
+  "mcp_servers": {
+    "together-ai-docs": {
+      "type": "http",
+      "url": "https://docs.together.ai/mcp"
+    }
+  },
+  "cursor": {
+    "plugins": {
+      "vercel": { "enabled": true },
+      "supabase": { "enabled": true }
+    },
+    "recommendations": [
+      "ms-python.python",
+      "charliermarsh.ruff",
+      "dbaeumer.vscode-eslint",
+      "bradlc.vscode-tailwindcss",
+      "esbenp.prettier-vscode",
+      "eamodio.gitlens"
+    ]
+  }
+}

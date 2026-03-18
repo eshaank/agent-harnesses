@@ -1,0 +1,74 @@
+{
+  "skills": {
+    "chat-orchestration": {
+      "description": "LLM integration patterns — tool registry, SSE streaming, widget contracts",
+      "triggers": ["chat domain", "LLM", "tool registry", "SSE", "streaming"],
+      "stack": ["fastapi", "react"],
+      "depends_on": [],
+      "files": ["SKILL.md"]
+    },
+    "domain-builder": {
+      "description": "DDD domain creation — client, router, schema patterns for Argus",
+      "triggers": ["new domain", "create domain", "backend domain"],
+      "stack": ["fastapi"],
+      "depends_on": ["fastapi-templates"],
+      "files": ["SKILL.md"]
+    },
+    "fastapi-templates": {
+      "description": "Production FastAPI patterns — project structure, async, DI, CRUD",
+      "triggers": ["FastAPI", "backend", "API endpoint", "router"],
+      "stack": ["fastapi", "python"],
+      "depends_on": [],
+      "files": ["SKILL.md"]
+    },
+    "massive-api": {
+      "description": "Polygon.io + Massive API integration and command reference",
+      "triggers": ["Massive", "Polygon", "financial data", "market data"],
+      "stack": ["python"],
+      "depends_on": [],
+      "files": ["SKILL.md", "references/"]
+    },
+    "supabase-postgres-best-practices": {
+      "description": "PostgreSQL optimization — indexing, locking, connections, RLS, partitioning",
+      "triggers": ["supabase", "postgres", "database", "SQL", "index", "query"],
+      "stack": ["supabase", "postgres"],
+      "depends_on": [],
+      "files": ["SKILL.md", "references/"]
+    },
+    "vercel-react-best-practices": {
+      "description": "React/Next.js optimization — rendering, async, bundles, SSR",
+      "triggers": ["React", "Next.js", "Vercel", "performance", "rendering"],
+      "stack": ["react", "nextjs"],
+      "depends_on": [],
+      "files": ["SKILL.md", "rules/"]
+    },
+    "ui-design-system": {
+      "description": "Argus visual design system — tokens, components, typography",
+      "triggers": ["design system", "UI", "styles", "theme"],
+      "stack": ["react"],
+      "depends_on": [],
+      "files": ["SKILL.md"]
+    },
+    "widget-builder": {
+      "description": "Widget creation patterns for the Argus canvas system",
+      "triggers": ["widget", "canvas", "chart component"],
+      "stack": ["react"],
+      "depends_on": ["ui-design-system"],
+      "files": ["SKILL.md"]
+    },
+    "polymarket-api": {
+      "description": "Polymarket CLOB API integration",
+      "triggers": ["polymarket", "prediction market"],
+      "stack": ["python"],
+      "depends_on": [],
+      "files": ["SKILL.md"]
+    },
+    "refactor-migrator": {
+      "description": "Code migration and refactoring patterns",
+      "triggers": ["refactor", "migrate", "restructure"],
+      "stack": [],
+      "depends_on": [],
+      "files": ["SKILL.md"]
+    }
+  }
+}

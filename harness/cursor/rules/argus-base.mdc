@@ -1,6 +1,0 @@
----
-description: Core project rules — security, workflow, env vars, naming, debugging
-alwaysApply: true
----
-
-@.rules/base.md
